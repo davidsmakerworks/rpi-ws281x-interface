@@ -1,0 +1,6 @@
+# Ignore Makefile and nbproject folder when detecting repository language
+Makefile linguist-generated=true
+**/nbproject/* linguist-generated=true
+
+# Auto detect text files and perform LF normalization
+* text=auto

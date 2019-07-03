@@ -1,0 +1,325 @@
+EESchema Schematic File Version 4
+LIBS:RPi-LED-Driver-cache
+EELAYER 29 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "WS281x-Raspberry Pi Interface Board"
+Date "2019-07-02"
+Rev "1"
+Comp "David Rice - David's MakerWorks"
+Comment1 "github.com/davidsmakerworks"
+Comment2 "Interface board between Raspberry Pi and WS281x LED strip"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Barrel_Jack J1
+U 1 1 5D1C2927
+P 1700 1650
+F 0 "J1" H 1700 1860 50  0000 C CNN
+F 1 "Barrel_Jack" H 1700 1450 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 1750 1610 50  0001 C CNN
+F 3 "~" H 1750 1610 50  0001 C CNN
+	1    1700 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x20_Odd_Even J3
+U 1 1 5D1C313F
+P 8700 2050
+F 0 "J3" H 8750 3050 50  0000 C CNN
+F 1 "Conn_02x20_Odd_Even" H 8750 950 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 8700 2050 50  0001 C CNN
+F 3 "~" H 8700 2050 50  0001 C CNN
+	1    8700 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D1C805A
+P 3850 3900
+F 0 "R1" V 3930 3900 50  0000 C CNN
+F 1 "10K" V 3850 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3780 3900 50  0001 C CNN
+F 3 "~" H 3850 3900 50  0001 C CNN
+	1    3850 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5D1C898E
+P 3400 4500
+F 0 "C2" H 3425 4600 50  0000 L CNN
+F 1 "0.1uF" H 3425 4400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3438 4350 50  0001 C CNN
+F 3 "~" H 3400 4500 50  0001 C CNN
+	1    3400 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C1
+U 1 1 5D1C8F54
+P 2650 1650
+F 0 "C1" H 2675 1750 50  0000 L CNN
+F 1 "470uF" H 2675 1550 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 2650 1650 50  0001 C CNN
+F 3 "~" H 2650 1650 50  0001 C CNN
+	1    2650 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J2
+U 1 1 5D1C9988
+P 6250 1400
+F 0 "J2" H 6250 1600 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 6250 1200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6250 1400 50  0001 C CNN
+F 3 "~" H 6250 1400 50  0001 C CNN
+	1    6250 1400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L DavidsMakerWorks_Custom:PIC16F18325-I-JQ IC1
+U 1 1 5D1CA253
+P 5100 4400
+F 0 "IC1" H 5150 3300 60  0000 C CNN
+F 1 "PIC16F18325-I-JQ" V 5100 4400 60  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-16-1EP_4x4mm_P0.65mm_EP2.1x2.1mm" H 5150 3700 60  0001 C CNN
+F 3 "" H 5150 3700 60  0000 C CNN
+	1    5100 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 5D1CBA27
+P 2350 1250
+F 0 "#PWR0101" H 2350 1100 50  0001 C CNN
+F 1 "+5V" H 2350 1390 50  0000 C CNN
+F 2 "" H 2350 1250 50  0001 C CNN
+F 3 "" H 2350 1250 50  0001 C CNN
+	1    2350 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5D1CC0DD
+P 2350 2100
+F 0 "#PWR0102" H 2350 1850 50  0001 C CNN
+F 1 "GND" H 2350 1950 50  0000 C CNN
+F 2 "" H 2350 2100 50  0001 C CNN
+F 3 "" H 2350 2100 50  0001 C CNN
+	1    2350 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1550 2350 1550
+Wire Wire Line
+	2000 1750 2350 1750
+Wire Wire Line
+	2350 1750 2350 2000
+Wire Wire Line
+	2350 1550 2350 1350
+Wire Wire Line
+	2650 1500 2650 1350
+Wire Wire Line
+	2650 1350 2350 1350
+Connection ~ 2350 1350
+Wire Wire Line
+	2350 1350 2350 1250
+Wire Wire Line
+	2650 1800 2650 2000
+Wire Wire Line
+	2650 2000 2350 2000
+Connection ~ 2350 2000
+Wire Wire Line
+	2350 2000 2350 2100
+Text GLabel 6250 4100 2    50   Output ~ 0
+LED_DATA
+Wire Wire Line
+	5900 4100 6250 4100
+Text GLabel 6300 5200 2    50   Input ~ 0
+SERIAL_DATA
+Wire Wire Line
+	5900 5200 6300 5200
+Wire Wire Line
+	4300 3700 3400 3700
+Wire Wire Line
+	3400 3700 3400 3900
+Wire Wire Line
+	4300 5200 3400 5200
+Wire Wire Line
+	3400 5200 3400 4650
+$Comp
+L power:+5V #PWR0103
+U 1 1 5D1D4295
+P 3400 3300
+F 0 "#PWR0103" H 3400 3150 50  0001 C CNN
+F 1 "+5V" H 3400 3440 50  0000 C CNN
+F 2 "" H 3400 3300 50  0001 C CNN
+F 3 "" H 3400 3300 50  0001 C CNN
+	1    3400 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 3400 3700
+$Comp
+L power:GND #PWR0104
+U 1 1 5D1D4CBD
+P 3400 5600
+F 0 "#PWR0104" H 3400 5350 50  0001 C CNN
+F 1 "GND" H 3400 5450 50  0000 C CNN
+F 2 "" H 3400 5600 50  0001 C CNN
+F 3 "" H 3400 5600 50  0001 C CNN
+	1    3400 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 5D1D5060
+P 5800 1050
+F 0 "#PWR0105" H 5800 900 50  0001 C CNN
+F 1 "+5V" H 5800 1190 50  0000 C CNN
+F 2 "" H 5800 1050 50  0001 C CNN
+F 3 "" H 5800 1050 50  0001 C CNN
+	1    5800 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5D1D56E4
+P 5800 1750
+F 0 "#PWR0106" H 5800 1500 50  0001 C CNN
+F 1 "GND" H 5800 1600 50  0000 C CNN
+F 2 "" H 5800 1750 50  0001 C CNN
+F 3 "" H 5800 1750 50  0001 C CNN
+	1    5800 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1300 5800 1300
+Wire Wire Line
+	5800 1300 5800 1050
+Wire Wire Line
+	6050 1500 5800 1500
+Wire Wire Line
+	5800 1500 5800 1750
+Text GLabel 4950 1400 0    50   Input ~ 0
+LED_DATA
+Wire Wire Line
+	6050 1400 5500 1400
+$Comp
+L Connector:Conn_01x06_Male J4
+U 1 1 5D1D72CA
+P 8900 5300
+F 0 "J4" H 8900 5600 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 8900 4900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8900 5300 50  0001 C CNN
+F 3 "~" H 8900 5300 50  0001 C CNN
+	1    8900 5300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 3900 4150 3900
+Wire Wire Line
+	3700 3900 3400 3900
+Connection ~ 3400 3900
+Wire Wire Line
+	3400 3900 3400 4350
+Text GLabel 4000 4150 0    50   Input ~ 0
+~MCLR
+Wire Wire Line
+	4000 4150 4150 4150
+Wire Wire Line
+	4150 4150 4150 3900
+Connection ~ 4150 3900
+Wire Wire Line
+	4150 3900 4000 3900
+$Comp
+L Device:R R2
+U 1 1 5D1C86CE
+P 5350 1400
+F 0 "R2" V 5430 1400 50  0000 C CNN
+F 1 "22" V 5350 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5280 1400 50  0001 C CNN
+F 3 "~" H 5350 1400 50  0001 C CNN
+	1    5350 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 1400 4950 1400
+Text GLabel 6250 3700 2    50   BiDi ~ 0
+ICSPDAT
+Text GLabel 6250 3800 2    50   Input ~ 0
+ICSPCLK
+Wire Wire Line
+	6250 3700 5900 3700
+Wire Wire Line
+	6250 3800 5900 3800
+Wire Wire Line
+	3400 3700 3400 3300
+Wire Wire Line
+	3400 5200 3400 5600
+Connection ~ 3400 5200
+Text GLabel 8300 5100 0    50   Output ~ 0
+~MCLR
+$Comp
+L power:+5V #PWR0107
+U 1 1 5D1DDB0C
+P 7850 4950
+F 0 "#PWR0107" H 7850 4800 50  0001 C CNN
+F 1 "+5V" H 7850 5090 50  0000 C CNN
+F 2 "" H 7850 4950 50  0001 C CNN
+F 3 "" H 7850 4950 50  0001 C CNN
+	1    7850 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5D1DE664
+P 7850 5750
+F 0 "#PWR0108" H 7850 5500 50  0001 C CNN
+F 1 "GND" H 7850 5600 50  0000 C CNN
+F 2 "" H 7850 5750 50  0001 C CNN
+F 3 "" H 7850 5750 50  0001 C CNN
+	1    7850 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 5100 8300 5100
+Wire Wire Line
+	8700 5200 7850 5200
+Wire Wire Line
+	7850 5200 7850 4950
+Wire Wire Line
+	8700 5300 7850 5300
+Wire Wire Line
+	7850 5300 7850 5750
+Text GLabel 8300 5400 0    50   BiDi ~ 0
+ICSPDAT
+Text GLabel 8300 5500 0    50   Output ~ 0
+ICSPCLK
+Wire Wire Line
+	8700 5400 8300 5400
+Wire Wire Line
+	8700 5500 8300 5500
+$Comp
+L power:GND #PWR0109
+U 1 1 5D1E1614
+P 9900 1600
+F 0 "#PWR0109" H 9900 1350 50  0001 C CNN
+F 1 "GND" H 9900 1450 50  0000 C CNN
+F 2 "" H 9900 1600 50  0001 C CNN
+F 3 "" H 9900 1600 50  0001 C CNN
+	1    9900 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1350 9900 1350
+Wire Wire Line
+	9900 1350 9900 1600
+Text GLabel 9300 1450 2    50   Output ~ 0
+SERIAL_DATA
+Wire Wire Line
+	9300 1450 9000 1450
+$EndSCHEMATC
