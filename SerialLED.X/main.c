@@ -96,18 +96,18 @@
  * For strings or bright strips, usual values are 0xFF, 0x7F, 0x3F 
  * For small rings, usual values are 0x7F, 0x1F, 0x0F 
  */
-#define MAX_BRIGHT 0x7F
-#define MID_BRIGHT 0x1F
-#define DIM_BRIGHT 0x0F
+#define MAX_BRIGHT 0xFF
+#define MID_BRIGHT 0x7F
+#define DIM_BRIGHT 0x3F
 
 /* Maximums for secondary colors used in fire and ice effects 
  *
  * For strings or bright strips, usual values are 0x7F, 0x3F, 0x1F 
  * For small rings, usual values are 0x3F, 0x0F, 0x08 
  */
-#define MAX_BRIGHT_SEC 0x3F
-#define MID_BRIGHT_SEC 0x0F
-#define DIM_BRIGHT_SEC 0x08
+#define MAX_BRIGHT_SEC 0x7F
+#define MID_BRIGHT_SEC 0x3F
+#define DIM_BRIGHT_SEC 0x1F
 
 /**** FREQUENTLY CHANGED CONFIGURATION VALUES END HERE ****/
 
