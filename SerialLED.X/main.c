@@ -105,9 +105,9 @@
  * For strings or bright strips, usual values are 0x7F, 0x3F, 0x1F 
  * For small rings, usual values are 0x3F, 0x0F, 0x08 
  */
-#define MAX_BRIGHT_SEC 0x7F
-#define MID_BRIGHT_SEC 0x3F
-#define DIM_BRIGHT_SEC 0x1F
+#define MAX_BRIGHT_SEC 0x5F
+#define MID_BRIGHT_SEC 0x2F
+#define DIM_BRIGHT_SEC 0x07
 
 /**** FREQUENTLY CHANGED CONFIGURATION VALUES END HERE ****/
 
@@ -480,7 +480,7 @@ void main(void) {
     init_ports(); /* Initialize I/O ports */
     init_spi(); /* Initialize MSSP1 for SPI */
     init_timers(); /* Initialize Timer1 for display updates and Timer2 to drive PWM generator */
-    init_pwm(); /* Initlialze PWM5 generator */
+    init_pwm(); /* Initialize PWM5 generator */
     init_clc(); /* Initialize CLC1 to drive WS281x LEDs */
     
     set_brightness(INIT_LEVEL);

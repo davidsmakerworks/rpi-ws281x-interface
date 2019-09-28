@@ -30,11 +30,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.05</languageToolchainVersion>
+        <languageToolchainVersion>2.10</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.0.71"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.1.82"/>
       </packs>
       <compileType>
         <linkerTool>
@@ -45,7 +45,7 @@
         </archiverTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
+          <parseOnProdLoad>true</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
@@ -139,6 +139,9 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <XC8-CO>
+        <property key="coverage-enable" value=""/>
+      </XC8-CO>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>
         <property key="gcc-opt-driver-new" value="true"/>
