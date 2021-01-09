@@ -1,8 +1,11 @@
 # MPLAB X Files
 build
-dist
 debug
+dist
 private
+.generated_files
+Makefile-*
+Package-*
 
 # KiCad Files
 
